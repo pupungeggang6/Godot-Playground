@@ -14,10 +14,18 @@ func load_data():
         
     file = FileAccess.open(file_name, FileAccess.READ)
     save = JSON.parse_string(file.get_as_text())
-    print(save)
+    file.close()
 
 func save_data():
-    pass
+    var file = FileAccess.open(file_name, FileAccess.WRITE)
+    file.store_string(str(save))
+    file.close()
 
 func erase_data():
-    pass
+    var file = FileAccess.open(file_name, FileAccess.WRITE)
+    file.store_string(str(empty_save))
+    file.close()
+
+    file = FileAccess.open(file_name, FileAccess.READ)
+    save = JSON.parse_string(file.get_as_text())
+    file.close()
