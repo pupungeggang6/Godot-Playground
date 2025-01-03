@@ -21,11 +21,13 @@ Save="*res://Script/save.gd"
 Var="*res://Script/var.gd"
 FPhysics="*res://Script/f_physics.gd"
 FGame="*res://Script/f_game.gd"
+GResource="*res://Script/g_resource.gd"
+Const="*res://Script/const.gd"
 
 [display]
 
 window/size/viewport_width=1280
-window/size/viewport_height=720
+window/size/viewport_height=800
 window/stretch/mode="viewport"
 
 [input]

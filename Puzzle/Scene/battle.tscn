@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvgiypd67dpvs"]
+
+[ext_resource type="Script" uid="uid://b5hnpco1gn53q" path="res://Script/Scene/battle.gd" id="1_t35rp"]
+[ext_resource type="Script" uid="uid://d0idh7pt0y3gq" path="res://Script/Node/board.gd" id="2_erfcq"]
+
+[node name="Battle" type="Node2D"]
+script = ExtResource("1_t35rp")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="UI"]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 800.0
+
+[node name="Board" type="Node2D" parent="."]
+position = Vector2(640, 400)
+script = ExtResource("2_erfcq")
+
+[node name="Rect" type="Sprite2D" parent="Board"]
+
+[node name="Block" type="Node2D" parent="Board"]

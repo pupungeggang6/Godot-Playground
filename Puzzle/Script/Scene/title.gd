@@ -1,7 +1,7 @@
 extends Node2D
 
-@onready var node_button_start = get_node('ButtonStart')
-@onready var node_button_erase = get_node('ButtonErase')
+@onready var node_button_start = get_node('UI/ButtonStart')
+@onready var node_button_erase = get_node('UI/ButtonErase')
 
 func _ready():
     Save.load_data()
