@@ -19,11 +19,13 @@ var state = ''
 var time_pause = 0
 var clicked = [-1, -1]
 var click_num = 0
+var num_flip = 0
 
 var img
 var texture
 
 func _ready():
+    get_node("Label").text = '0'
     img = Image.load_from_file("res://Texture.png")
     texture = ImageTexture.create_from_image(img)
     generate_board()
@@ -104,6 +106,8 @@ func check_flipped(a, b):
         covered[b] = 1
         
     clicked = [-1, -1]
+    num_flip += 1
+    get_node("Label").text = str(num_flip)
     
 func point_inside_rect(point, rect):
     return point.x > rect[0] - rect[2] / 2 and point.x < rect[0] + rect[2] / 2 and point.y > rect[1] - rect[3] / 2 and point.y < rect[1] + rect[3] / 2
