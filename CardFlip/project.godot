@@ -10,23 +10,14 @@ config_version=5
 
 [application]
 
-config/name="Puzzle"
-run/main_scene="uid://4mg6uk5nl2qf"
+config/name="CardFlip"
+run/main_scene="uid://dunj2q4wqklxu"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[autoload]
-
-Save="*res://Script/save.gd"
-Var="*res://Script/var.gd"
-FPhysics="*res://Script/f_physics.gd"
-FGame="*res://Script/f_game.gd"
-GResource="*res://Script/g_resource.gd"
-Const="*res://Script/const.gd"
-
 [display]
 
-window/size/viewport_width=1280
+window/size/viewport_width=800
 window/size/viewport_height=800
 window/stretch/mode="viewport"
 
@@ -40,5 +31,6 @@ mouse_left={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
