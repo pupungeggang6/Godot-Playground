@@ -1,11 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://cvygk73xreq3n"]
+[gd_scene load_steps=5 format=3 uid="uid://cvygk73xreq3n"]
 
+[ext_resource type="Script" uid="uid://cpc8s5s5fojr3" path="res://Script/game.gd" id="1_4jv7b"]
 [ext_resource type="Texture2D" uid="uid://cv1qf7v0ihsw7" path="res://icon.svg" id="1_mhtsl"]
+[ext_resource type="Script" uid="uid://dtpjk7ojb6u28" path="res://Script/player.gd" id="2_03iqk"]
 [ext_resource type="Texture2D" uid="uid://cvc8dyf4qorvo" path="res://Image/Platform.png" id="2_w51g1"]
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_4jv7b")
 
 [node name="Player" type="Node2D" parent="."]
+script = ExtResource("2_03iqk")
 
 [node name="Icon" type="Sprite2D" parent="Player"]
 position = Vector2(329, 430)
