@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvygk73xreq3n"]
+
+[ext_resource type="Texture2D" uid="uid://cv1qf7v0ihsw7" path="res://icon.svg" id="1_mhtsl"]
+[ext_resource type="Texture2D" uid="uid://cvc8dyf4qorvo" path="res://Image/Platform.png" id="2_w51g1"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Player" type="Node2D" parent="."]
+
+[node name="Icon" type="Sprite2D" parent="Player"]
+position = Vector2(329, 430)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_mhtsl")
+
+[node name="Platform2" type="Sprite2D" parent="."]
+position = Vector2(350, 524)
+texture = ExtResource("2_w51g1")
+
+[node name="Platform" type="Sprite2D" parent="."]
+position = Vector2(650, 353)
+texture = ExtResource("2_w51g1")
