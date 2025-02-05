@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8vgwwe2cm3iq"]
+
+[ext_resource type="Script" uid="uid://cjvq6qfslpebd" path="res://Script/Thing/platform.gd" id="1_bmi2y"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_bmi2y"]
+
+[node name="Platform" type="Node2D"]
+z_index = 1
+script = ExtResource("1_bmi2y")
+
+[node name="Bar" type="Node2D" parent="."]
+
+[node name="Texture" type="Sprite2D" parent="Bar"]
+texture = SubResource("ImageTexture_bmi2y")
+
+[node name="Path" type="Node2D" parent="."]
