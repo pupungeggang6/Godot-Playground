@@ -12,12 +12,12 @@ var speed = 200.0
 func set_data(data):
     size = data["size"]
     path = data["path"].duplicate(true)
+    speed = data["speed"]
     
 func _ready():
     pass
     
 func _process(delta):
-    queue_redraw()
     move(delta)
     
 func construct(data):
@@ -43,6 +43,8 @@ func construct(data):
         node_path.add_child(temp_node)
     
     var temp_node = Line2D.new()
+    temp_node.default_color = Color.BLACK
+    temp_node.width = 4
     temp_node.closed = true
     temp_node.points = path.duplicate(true)
     node_path.add_child(temp_node)
